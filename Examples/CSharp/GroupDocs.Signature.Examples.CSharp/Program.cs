@@ -11,17 +11,15 @@ namespace GroupDocs.Signature.Examples.CSharp
         static void Main(string[] args)
         {
             //Uncomment the below line to apply license
-            //Utilities.ApplyLicense();
+           // Utilities.ApplyLicense();
 
             #region WorkingWithTextSignature
 
             //Signatures.SignPdfDocumentWithText("text.pdf");
-
             //Signatures.SignCellDocumentWithText("pie chart.xlsx");
-
             //Signatures.SignSlideDocumentWithText("butterfly effect.pptx");
-
             //Signatures.SignWordDocumentWithText("getting started.docx");
+            //Signatures.SignSlideDocumentWithTextShadow("butterfly effect.pptx");
 
             #endregion
 
@@ -49,6 +47,12 @@ namespace GroupDocs.Signature.Examples.CSharp
 
             //digital signatures are not supported yet for slides documents 
             //Signatures.SignSlideDocumentDigitally("butterfly effect.pptx");
+
+            //Signatures.SignWordDocumentDigitallywithSignatureAppearance("getting started.docx");
+
+            //Signatures.SignCellDocumentDigitallywithSignatureAppearance("pie chart.xlsx");
+
+            //Signatures.SignPDFDocumentwithStretchMode("digital signatures.pdf");
 
             #endregion
 
@@ -150,6 +154,15 @@ namespace GroupDocs.Signature.Examples.CSharp
             //Signatures.VerifySlidesDocumentsSignedWithBarcodeSignature("butterfly effect.pptx");
             //Signatures.VerifyWordsDocumentsSignedWithBarcodeSignature("getting started.docx");
             //Signatures.VerifyImagesDocumentsSignedWithBarcodeSignature("DocImages_BarCode.png");
+            //Signatures.SetColorsForBarcodeSignature("text.pdf");
+            //Signatures.SetInnerMarginAndTextAlignmentsForBarcodeSignature("text.pdf");
+
+            //Signatures.SearchBarCodeSignaturesInPDF("text.pdf");
+            //Signatures.SearchBarCodeSignaturesInCells("pie chart.xlsx");
+            //Signatures.SearchBarCodeSignaturesInImages("DocImages_QRCode.png");
+            //Signatures.SearchBarCodeSignaturesInSlides("butterfly effect.pptx");
+            //Signatures.SearchBarCodeSignaturesInWords("getting started.docx");
+
             #endregion
 
             #region WorkingWithQRcodeSignatures
@@ -163,6 +176,20 @@ namespace GroupDocs.Signature.Examples.CSharp
             //Signatures.VerifyPdfDocumentSignedWithQrCodeSignature("text.pdf");
             //Signatures.VerifyWordsDocumentSignedWithQrCodeSignature("getting started.docx");
             //Signatures.VerifyImagesDocumentsSignedWithQRcodeSignature("DocImages_QRCode.png");
+            //Signatures.SearchQRCodeSignaturesInPDF("text.pdf");
+            //Signatures.SearchQRCodeSignaturesInCells("pie chart.xlsx");
+            //Signatures.SearchQRCodeSignaturesInImages("DocImages_QRCode.png");
+            //Signatures.SearchQRCodeSignaturesInSlides("butterfly effect.pptx");
+            //Signatures.SearchQRCodeSignaturesInWords("getting started.docx");
+            //Signatures.SetColorAndLogoForQRCodeSignature("text.pdf");
+            //Signatures.SetInnerMarginsAndTextAlignmentForQRCodeSignature("text.pdf");
+
+            //Signatures.SignDocumentWithCustomQRCodeData("text.pdf");
+            //Signatures.SignDocumentWithEmbeddedVCardObjectToQRCode("text.pdf");
+            //Signatures.SignDocumentWithEmbeddedEmailObjectToQRCode("text.pdf");
+            //Signatures.SearchCustomObjectFromSignedPDF("text.pdf");
+            //Signatures.SearchStandardVCardAndEmailObjectFromSignedPDF("text.pdf");
+
             #endregion
 
             #region WorkingWithStampSignatures
@@ -170,18 +197,22 @@ namespace GroupDocs.Signature.Examples.CSharp
             //Signatures.SignCellsDocumentWithStampSignature("pie chart.xlsx");
             //Signatures.SignPdfDocumentWithStampSignature("text.pdf");
             //Signatures.SignSlidesDocumentWithStampSignature("butterfly effect.pptx");
-            //Signatures.SignWordsDocumentWithStampSignature("getting started.docx");
+            //Signatures.SignWordsDocumentWithStampSignature("getting started.docx");            
             #endregion
 
             //Signatures.SetOutputFileName();
             //Signatures.GetDocumentInfo("text.pdf");
+            //Signatures.GetDocumentInfoFromURL();
 
-            //working with image documents
+            #region WorkingWithImageDocument
             //image documents are supported from version 17.8.0 onwards
             //Signatures.SignImageDocumentWithTextSignatureAsImage("ImageDocument.png");
             //Signatures.SignImageDocumentWithBarCode("ImageDocument.png");
             //Signatures.SignImageDocumentWithQRCode("ImageDocument.png");
             //Signatures.SignImageDocumentWithStampSignature("ImageDocument.png");
+
+            //Signatures.SignImageWithStampSignatureUsingStampType("DocImages_QRCode.png");
+
             //Signatures.SaveSignedImagesDocumentsWithDifferentOutputType("ImageDocument.png");
             //Signatures.ApplyTransperancyRotationToTextSignatureImagesDocument("ImageDocument.png");
             //Signatures.SignImagesDocumentsWithTextSignatureAsWatermark("ImageDocument.png");
@@ -189,6 +220,30 @@ namespace GroupDocs.Signature.Examples.CSharp
             //Signatures.ImageDocumentAdjustmentSizeMarginsIntentOfImageSignature("ImageDocument.png");
             //Signatures.ImageDocumentMarginAlignmentForImageSignature("ImageDocument.png");
             //Signatures.ImageDocumentImageSignatureExtendedOptions("ImageDocument.png");
+            //Signatures.ExportCellsDocumentAsImage("pie chart.xlsx");
+            //Signatures.ExportCellsDocumentAsMultiPageTiff("pie chart.xlsx");
+            #endregion
+
+            //Signatures.SignDocumentWithSignatureProcessEvents("text.pdf");
+            //Signatures.VerifyDocumentWithVerificationProcessEvents("text.pdf");
+            //Signatures.SearchDigitalSignatureInPDFDocuments("text.pdf");
+            //Signatures.SearchDigitalSignatureInSystem();
+            //Signatures.SignCellDocumentWithTextSignatureAppearence("pie chart.xlsx");
+            //Signatures.SignDocumentWithExtendedSignatureProcessEvents("text.pdf");
+
+            //Signatures.SearchBarcodeSignatureWithProcessEvents("text.pdf");
+
+            //Signatures.EnumerateAllOptionsInsideCollection("text.pdf");
+
+            #region working with Brushes
+
+            //Signatures.SetupSolidBrushForSignatureBackground("text.pdf");
+            //Signatures.SetupLinearGrdiantBrushForSignatureBackground("pie chart.xlsx");
+            //Signatures.SetupRadialGrdiantBrushForSignatureBackground("text.pdf");
+            //Signatures.SetupTextureBrushForSignatureBackground("butterfly effect.pptx");
+
+            #endregion
+
             Console.ReadKey();
         }
     }
