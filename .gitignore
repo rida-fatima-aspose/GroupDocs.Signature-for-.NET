@@ -158,7 +158,7 @@ ClientBin/
 *~
 *.dbmdl
 *.dbproj.schemaview
-*.pfx
+#*.pfx
 *.publishsettings
 node_modules/
 bower_components/
@@ -194,3 +194,6 @@ FakesAssemblies/
 
 # Visual Studio 6 workspace options file
 *.opt
+Examples/GroupDocs.Signature.Examples.CSharp/Output/
+deploy_key
+*.lic
